@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Media Interaktif Bahasa Indonesia </title>
+<style>
+/************ CSS Menu bar **********/
+#menu{background:-webkit-linear-gradient(right,#ff0052,#8e2b88)}
+#menu ul{display: -webkit-inline-box;margin:0px;}
+#menu ul li{margin:20px 0px;display:block}
+#menu ul li a{padding:20px;font-size:18px;color:#ffffff;text-align:center;text-decoration:none;text-transform:capitalize}
+#menu ul li a:hover{background:#ffffff;opacity:0.8;color:#000000}
+
+/************* CSS Layar **********/
+#layar{width:1100px;background:#ffffff;border:1px solid #d4d4d4;min-height:500px;margin:50px auto;border-radius:5px;padding-bottom:15px;}
+
+#layar .pilihan{width:350px;height:150px;background:-webkit-linear-gradient(right,#ff0052,#8e2b88);display:block;margin:8px;float:left;border-radius: 20px}
+#layar .pilihan .materi{height:150px}
+#layar .pilihan .materi a{color:#ffffff;font-size:45px;padding:49px 20px;display:block;border-radius: 20px;text-decoration:none;}
+#layar .pilihan .materi a:hover{font-size:60px;transition: all 0.5s ease;border-radius:20px;padding:40px 20px;}
+
+#layar .pilihan .soal{background:#4267b2;height:150px}
+#layar .pilihan .soal a{color:#ffffff;font-size:45px;padding:49px 20px;display:block;}
+#layar .pilihan .soal a:hover{font-size:60px;transition: all 0.5s ease;padding:40px 20px;background:-webkit-linear-gradient(right,rgba(255, 0, 82, 0.22),rgb(255, 0, 82))}
+#layar .pilihan .about{background:#4267b2;height:150px}
+#layar .pilihan .about a{color:#ffffff;font-size:45px;padding:49px 20px;display:block;}
+#layar .pilihan .about a:hover{font-size:60px;transition: all 0.5s ease;padding:40px 20px;background:-webkit-linear-gradient(right,rgba(255, 0, 82, 0.22),rgb(255, 0, 82))}
+
+
+/*css3 design scrollbar*/
+::-webkit-scrollbar {width: 10px;}
+::-webkit-scrollbar-track {-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);background: #fdfdfd;}
+::-webkit-scrollbar-thumb {background: #4267b2;}
+
+/************* CSS Footer *********/
+#footer{background:#222222;color:#ffffff;text-align:center;font-size:14px;padding:10px}
+
+/******* CSS about ******/
+.judul{text-align:center;margin-top:20px;font-size:50px;}
+.judul h1{display:inline-block;margin:-85px -8px;font-size:150px;-webkit-text-fill-color:rgba(0,0,0,0);background:-webkit-linear-gradient(top,#ff0052,#8e2b88);-webkit-background-clip:text}
+.catatan{text-align:center;margin:5px;font-size:20px;padding:20px;background:#4267b2;color:#ffffff;border:2px solid #ffffff;border-radius:10px}
+
+/* Tombol Button Pesan */
+
+#button a{background-color:#4267b2;color:#fff;padding:10px;display:block;width:693px;height:125px;float:right;text-align:center;border-radius:10px;margin:10px;line-height:60px;text-decoration:none;font-size:39px}
+#button a:hover{background:#333333}
+/* Jendela Pop Up */
+#popup{width:100%;height:100%;position:fixed;background:rgba(0,0,0,.7);top:0;left:0;z-index:9999;visibility:hidden}
+.window{width:854px;height:480px;background:#fff;border-radius:10px;position:relative;padding:10px;text-align:center;margin:5% auto}
+.window h2{margin:30px 0 0 0}
+/* Button Close */
+.close-button{width:3%;height:5%;line-height:23px;background:#000;border-radius:50%;border:3px solid #fff;display:block;text-align:center;color:#fff;text-decoration:none;position:absolute;top:-10px;right:-10px}
+/* Memunculkan Jendela Pop Up*/
+#popup:target{visibility:visible}
+
+/************ CSS BODY **********/
+body{margin:0px;background:url(image/bg.png) #fafafa}
+
+    
+/* Style the tab */
+.tab{width:350px;height:150px;background:-webkit-linear-gradient(right,#ff0052,#8e2b88);display:block;margin:8px;float:left;border-radius: 20px}
+
+/* Style the buttons inside the tab */
+.tab .tablinks{color:#ffffff;font-size:45px;padding:49px 20px;display:block;border-radius: 20px;text-decoration:none;}
+
+/* Change background color of buttons on hover */
+.tab .tablinks:hover{font-size:60px;transition: all 0.2s ease;border-radius:20px;padding:40px 20px;}
+
+/* Create an active/current tablink class */
+.tab .tablinks.active{background:#4267b2;font-size:60px;padding:41px;}
+
+/* Style the tab content */
+.tabcontent{display:none;padding:20px;margin:350px 10px 0;border:2px solid #4267b2;text-align: justify;font-size:20px;}
+</style>
+</head>
+<body>
+<nav id="menu">
+<ul>
+<li><a href="beranda.html">Beranda</a></li>
+<li><a href="materi.html">Materi</a></li>
+<li><a href="soal.html">Soal</a></li>
+<li><a href="tentang-kami.html">About Us</a></li>
+</ul>
+</nav>
+
+
+
+
+<div id="layar">
+
+<div class="catatan">Mari belajara bersama dengan mempelajari materi yang ada berikut ini</div> 
+
+<div class="tab">
+<div class="tablinks" style="cursor:pointer;background-image:url(image/cara1.png);background-size:40%;background-repeat:no-repeat;background-position:right;border-radius: 20px" onclick="openCity(event, 'Puisi')">PUISI</div>
+</div>
+
+<div class="tab">
+<div class="tablinks" style="cursor:pointer;background-image:url(image/cara2.png);background-size:40%;background-repeat:no-repeat;background-position:right;border-radius: 20px" onclick="openCity(event, 'Ciri')">CIRI-CIRI</div>
+</div>
+
+<div class="tab">
+<div class="tablinks" style="cursor:pointer;background-image:url(image/cara3.png);background-size:40%;background-repeat:no-repeat;background-position:right;border-radius: 20px" onclick="openCity(event, 'Rima')">RIMA</div>
+</div>
+
+<div class="tab">
+<div class="tablinks" style="cursor:pointer;background-image:url(image/cara4.png);background-size:40%;background-repeat:no-repeat;background-position:right;border-radius: 20px" onclick="openCity(event, 'Tanda')">TANDA</div>
+</div>
+
+<div id="button"><a href="#popup">Video Juara 1 Lomba Baca Puisi Mongonsidi FLS2N 2017</a></div>
+<div id="popup">
+<div class="window">
+<a href="#" class="close-button" title="Close">X</a>
+<video width="854" controls>
+  <source src="video/1.mp4" type="video/mp4">
+  <source src="video/1.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+</div>
+</div>
+
+
+
+<div id="Puisi" class="tabcontent">
+Apakah kamu pernah membayangkan akan menjadi apa saat dewasa nanti? Apa keinginanmu dimasa depan? Ada sebagian orang yang menuliskan cita – citanya dalam bentuk cerita. Ada juga yang menuliskannya dalam bentuk puisi. Bagaimana kita bias membedakan tulisan tersebut cerita atau puisi?<br>
+Ayo, bacalah salah satu tulisan berikut yang ditemukan salah satu siswa dalam membaca majalah!
+<br><br>
+<div class="kotak" style="width:450px;margin:0 auto;font-size:25px;padding:20px;background:#333;border-radius:10px;color:#ffffff">
+<h2 style="text-align:center;margin:0;font-size:30px">CITA - CITA<br>
+(Karya : Frida)<br><br></h2>
+Pikiranku melayang ke suatu masa<br>
+Aku pun bertanya-tanya<br>
+Mau jadi apa aku saat dewasa<br><br>
+Tiba-tiba, kuberpikir tentang cita-cita<br>
+Nantinya, aku mau menjadi seperti apa<br>
+Pilihanku jatuh kepada pembaca berita<br><br>
+Ya, aku ingin menjadi pembaca berita<br>
+Yang senantiasa tampil di layar kaca<br>
+Menyampaikan segala peristiwa<br><br>
+Aku berjanji akan berusaha<br>
+Belajar tanpa lelah dan tanpa putus asa<br>
+Demi menggapai cita – cita<br>
+</div>
+</div>
+
+<div id="Ciri" class="tabcontent">
+Puisi memiliki beberapa ciri, yaitu penyusunan baris dan bait, serta bahasanya terikat oleh irama dan rima.<br>
+<h3>1.	Baris dan Bait</h3>
+Puisi biasanya tersusun dalam bentuk bait – bait. Dalam suatu bait puisi terdapat beberapa baris kata ataupun kalimat.
+<h3>2.	Irama dan Rima</h3>
+Irama adalah keselarasan bunyi pada puisi yang dibentuk oleh pergantian tekanan kata. Irama berhubungan dengan panjang pendekatan bunyi serta kemerduan bunyi saat membacakan puisi. Selain irama dalam puisi juga terdapat rima. Rima adalah persamaan bunyi yang ada dalam baris – baris puisi.<br><br>
+Perhatikan kembali kutipan puisi “Cita – cita” berikut!<br>
+<div class="sip1" style="border-right:5px solid #222;display:block;width:500px;border-radius:20px">
+Pikiranku melayang ke suatu masa <b>--------> baris pertama</b> <br>
+Akupun bertanya – Tanya <b>-------------------> baris kedua</b><br>
+</div>
+<div class="sip4" style="margin-left:525px;margin-top:-35px;color:#4267b2;width:280px">
+Bait Puisi
+</div><br>
+Mau jadi apa aku saat dewasa<br><br>
+<div class="sip2" style="border-right:5px solid #222;display:block;width:360px;border-radius:20px">
+Tiba – tiba, kuberpikir tentang cita – cita	<br>
+Nanti, akum au menjadi seperti apa<br>
+Pilihanku jatuh kepada pembaca berita<br>
+</div>
+<div class="sip3" style="margin-left:390px;margin-top:-55px;color:#4267b2;width:280px">
+Puisi ini berima sama. Setiap baris dalam bait puisi ini berakhiran a
+</div>
+</div>
+
+<div id="Rima" class="tabcontent">
+Ciri – ciri puisi, yaitu bahasanya terikat oleh irama, rima, serta penyusunan baris dan bait,
+Dalam puisi terdapat beberapa jenis rima, yaitu sebagai berikut.
+<h3>a.	Rima a-b-a-b</h3>
+Puisi berima a-b-a-b sering juga disebut puisi berima silang. Puisi berima silang berarti dalam bait puisi memiliki persamaan bunyi pada baris pertama dengan baris ketiga dan baris kedua dengan baris keempat.<br><br>
+<div class="kotak" style="width:450px;margin:0 auto;font-size:25px;padding:20px;background:#333;border-radius:10px;color:#ffffff">
+<h2 style="margin:0;font-size:30px">CONTOH :</h2><br>
+Belajar giat setiap hari<br>
+Tanpa jemu dan tak kenal waktu<br>
+Semua kukerjakan setulus hati<br>
+Demi mewujudkan cita-citaku<br>
+</div>
+<hr>
+
+<h3>b.	Rima a-b-b-a</h3>
+Rima a-b-b-a dalam suatu puisi disebut juga rima peluk. Bait puisi yang berima peluk memiliki persamaan bunyi pada baris pertama dengan baris keempat dan baris kedua dengan baris ketiga.<br><br>
+<div class="kotak" style="width:500px;margin:0 auto;font-size:25px;padding:20px;background:#333;border-radius:10px;color:#ffffff">
+<h2 style="margin:0;font-size:30px">CONTOH :</h2><br>
+Di atas karpet merah berjalan penuh gaya<br>
+Berlenggak – lenggok bak seorang putri<br>
+Mengenakan busana indah tak terperai<br>
+Membuat semua terpesona akan kecantikannya<br>
+</div>
+<hr>
+
+<h3>c.	Rima a-a-b-b</h3>
+Rima a-a-b-b disebut juga rima pasangan. Bait puisi yang berima pasangan biasanya memiliki persamaan bunyi pada baris pertama dengan baris kedua dan baris ketiga dengan baris keempat.<br><br>
+<div class="kotak" style="width:580px;margin:0 auto;font-size:25px;padding:20px;background:#333;border-radius:10px;color:#ffffff">
+<h2 style="margin:0;font-size:30px">CONTOH :</h2><br>
+Inginku memiliki suara merdu<br>
+Agar kudapat menyanyikan sebuah lagu<br>
+Sebagai hiburan untuk seluruh handai tolan<br>
+Dalam sebuah pertunjukan yang dipenuhi para seniman<br>
+</div>
+<hr>
+
+<h3>d.	Rima a-a-a-a</h3>
+Puisi yang berima a-a-a-a sering juga disebut puisi berima terus. Puisi yang berima terus memiliki persamaan bunyi di semua barisnya, mulai dari baris pertama,kedua,ketiga, hingga baris terakhir.<br><br>
+<div class="kotak" style="width:450px;margin:0 auto;font-size:25px;padding:20px;background:#333;border-radius:10px;color:#ffffff">
+<h2 style="margin:0;font-size:30px">CONTOH :</h2><br>
+Terbang dengan burung besi<br>
+Menembus langit tinggi<br>
+Berkeliling seluruh negeri<br>
+Menggapai mimpi menjadi pilot sejati<br>
+</div>
+</div>
+
+<div id="Tanda" class="tabcontent">
+<b>PENGGUNAAN TANDA JEDA DALAM MENDEKLAMASIKAN PUISI</b><br>
+Kita dapat menceritakan cita – cita dalam bentuk puisi. Agar isi puisi dapat tersampaikan ke pendengar dengan baik, kita harus membacanya dengan lantang dan jelas. Saat membaca puisi, biasanya kita memerlukan sedikit waktu untuk mengambil napas. Waktu untuk mengambil napas itu disebut jeda.<br>
+Berikut adalah beberapa tanda jeda saat membaca puisi.<br><br>
+<h3>1.	/	:</h3> Tanda jeda ini berarti berhenti sesaat untuk bernapas. Fungsi tanda jeda ini hamper      
+	sama seperti fungsi tanda koma.
+<h3>2.	//	:</h3> Tanda jeda ini berarti berhenti agak lama. Fungsi tanda jeda ini hamper sama dengan 
+	fungsi tanda titik. Biasanya tanda jeda ini digunakan di baris akhir dalam satu bait.
+<h3>3.	///	:</h3> tanda jeda ini berarti berhenti lama sekali. Tanda jeda ini biasa digunakan pada akhir
+	puisi.
+
+
+</div>
+
+<script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+
+
+
+</div>
+<footer id="footer">
+Copyright @2018
+</footer>
+
+
+</body>
+</html>

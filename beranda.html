@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Media Interaktif Bahasa Indonesia </title>
+<style>
+* {box-sizing: border-box}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {color:#f2f2f2;font-size:15px;padding:15px 12px;position:absolute;bottom:8px;width:100%;text-align:center;background:rgba(0,0,0,0.91);border-top:3px dashed #ffffff;border-bottom:3px dashed #ffffff;}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/************ CSS Menu bar **********/
+#menu{background:-webkit-linear-gradient(right,#ff0052,#8e2b88)}
+#menu ul{display: -webkit-inline-box;margin:0px;}
+#menu ul li{margin:20px 0px;display:block}
+#menu ul li a{padding:20px;font-size:18px;color:#ffffff;text-align:center;text-decoration:none;text-transform:capitalize}
+#menu ul li a:hover{background:#ffffff;opacity:0.8;color:#000000}
+
+/************* CSS Layar **********/
+#layar{width:1100px;background:#ffffff;border:1px solid #d4d4d4;height:660px;margin:50px auto;border-radius:5px}
+#layar h1{text-align:center;}
+#layar .pilihan{width:350px;height:150px;background:#333333;display:block;margin:8px;float:left}
+#layar .pilihan .materi{background:#4267b2;height:150px}
+#layar .pilihan .materi a{color:#ffffff;font-size:45px;padding:49px 20px;display:block;}
+#layar .pilihan .materi a:hover{font-size:60px;transition: all 0.5s ease;padding:40px 20px;background:-webkit-linear-gradient(right,rgba(255, 0, 82, 0.22),rgb(255, 0, 82))}
+#layar .pilihan .soal{background:#4267b2;height:150px}
+#layar .pilihan .soal a{color:#ffffff;font-size:45px;padding:49px 20px;display:block;}
+#layar .pilihan .soal a:hover{font-size:60px;transition: all 0.5s ease;padding:40px 20px;background:-webkit-linear-gradient(right,rgba(255, 0, 82, 0.22),rgb(255, 0, 82))}
+#layar .pilihan .about{background:#4267b2;height:150px}
+#layar .pilihan .about a{color:#ffffff;font-size:45px;padding:49px 20px;display:block;}
+#layar .pilihan .about a:hover{font-size:60px;transition: all 0.5s ease;padding:40px 20px;background:-webkit-linear-gradient(right,rgba(255, 0, 82, 0.22),rgb(255, 0, 82))}
+
+/*css3 design scrollbar*/
+::-webkit-scrollbar {width: 10px;}
+::-webkit-scrollbar-track {-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);background: #fdfdfd;}
+::-webkit-scrollbar-thumb {background: #4267b2;}
+
+/************* CSS Footer *********/
+#footer{background:#222222;color:#ffffff;text-align:center;font-size:14px;padding:10px}
+
+/************ CSS BODY **********/
+body{margin:0px;background:url(image/bg.png) #fafafa}
+</style>
+</head>
+<body>
+<nav id="menu">
+<ul>
+<li><a href="beranda.html">Beranda</a></li>
+<li><a href="materi.html">Materi</a></li>
+<li><a href="soal.html">Soal</a></li>
+<li><a href="tentang-kami.html">About Us</a></li>
+</ul>
+</nav>
+
+
+
+
+<div id="layar">
+<h1>Selamat Datang Di Website Media Pembelajaran<br> Mengenal Puisi Kelas 4 Tema 6</h1>
+<hr>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext"><h2>Kompetensi Dasar 3.6</h2></div>
+  <img src="image/gambar1.jpg" style="width:100%">
+  <div class="text">MENGALI ISI DAN AMANAT PUISI YG DISAJIKAN SECARA LISAN DAN TULIS <br>DENGAN TUJUAN UNTUK KESENANGAN</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"><h2 style="color:#000000">Kompetensi Dasar 4.6</h2></div>
+  <img src="image/gambar2.jpg" style="width:100%">
+  <div class="text">MELISANKAN PUISI HASIL KARYA PRIBADI DENGAN LAFAL,INTONASI DAN EKSPRESI<br> YANG TEPAT SEBAGAI BENTUK UNGKAPAN DIRI</div>
+</div>
+
+</div>
+<br>
+
+<div class="pilihan">
+<div class="materi" style="background:#4267b2;height:150px;background-image:url(image/materi.png);background-size:40%;background-repeat:no-repeat;background-position:right">
+<a href="materi.html">MATERI</a>
+</div>
+</div>
+
+<div class="pilihan">
+<div class="soal" style="background:#4267b2;height:150px;background-image:url(image/soal.png);background-size:40%;background-repeat:no-repeat;background-position:right">
+<a href="soal.html">SOAL</a>
+</div>
+</div>
+
+<div class="pilihan">
+<div class="about" style="background:#4267b2;height:150px;background-image:url(image/about.png);background-size:40%;background-repeat:no-repeat;background-position:right">
+<a href="tentang-kami.html">ABOUT US</a>
+</div>
+</div>
+
+</div>
+
+<footer id="footer">
+Copyright @2018
+</footer>
+
+
+<script type="text/javascript">
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1} 
+    slides[slideIndex-1].style.display = "block"; 
+    setTimeout(showSlides, 4000); // Change image every 2 seconds
+}
+</script>
+</body>
+</html>
